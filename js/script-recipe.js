@@ -5,15 +5,30 @@ $(document).ready( function(){
 
 $('.js-show-recipe').click(function() {
    $('div.page').addClass("make");
+   $('div.page').addClass("active");
+   $(".js-show-make").removeClass("active");
+
    
 });
 
 $('.js-show-make').click(function() {
     $('div.page').removeClass("make");
+    $('div.page').addClass("active");
+    $(".js-show-recipe").removeClass("active");
+ 
     
 });
 
+
+
+
+
+
+
 });
+
+
+
 
 
 
