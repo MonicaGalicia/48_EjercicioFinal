@@ -121,6 +121,27 @@ function renderActivities(activitiesArray) {
 */
 
 
+function renderActivity(recipe) {
+    var template =
+    '<a class="item-activity">' +
+      '<span class="attribution"/>'+
+        '<span class="avatar">'+
+            '<img class="image-avatar" src="<%=userAvatar %>">'+
+        '</span>'+
+        '<span class="meta">'+
+            '<span class="author"><%=userName %></span>'+
+            '<span class="recipe"><%= recipeName %></span>'+
+            '<span class="location"><%=place %></span>'+
+        '</span>'+
+        '<div></div>'+
+      '</span>'+
+      '<div class="bg-image" style="background-image: url(&quout;<%=image %>&quout;)"></div>' +
+    '</a>';
+    var compiled= _.template( template); //convertir en un template
+    var codigo= compiled(recipe); //convertir en un template
 
+    var element=$(codigo); //convertir template a js 
+    $(".list-activities").append(element);
+}
 
 
