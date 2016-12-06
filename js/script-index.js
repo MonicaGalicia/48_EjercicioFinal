@@ -17,6 +17,19 @@ function printNews(){
 
     printNews();
 
+    function renderHighlightedRecipes() {
+    	
+    }
+
+
+
+    //function renderHighlightedRecipes() {
+    //for (var item in recipesArray){
+    	//console.log(recipesArray[item]);
+    //}
+   
+//};
+
 
 
 
@@ -25,8 +38,13 @@ function printNews(){
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
-function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+function renderHighlightedRecipes() {
+	$(recipesArray).each( function (index ,value){
+             if(value.highlighted==true){
+            console.log(value);
+        };
+    });
+    	
 }
 
 /*
