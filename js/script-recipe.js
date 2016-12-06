@@ -1,6 +1,5 @@
 $(document).ready( function(){
 	$(".js-menu").hide();
-
 	console.log("el documento esta listo");
 
 $('.js-show-recipe').click(function() {
@@ -8,7 +7,6 @@ $('.js-show-recipe').click(function() {
    $('div.page').addClass("active");
    $(".js-show-make").removeClass("active");
 
-   
 });
 
 $('.js-show-make').click(function() {
@@ -16,7 +14,6 @@ $('.js-show-make').click(function() {
     $('div.page').addClass("active");
     $(".js-show-recipe").removeClass("active");
  
-    
 });
 
 $('.js-back').click(function() {

@@ -7,6 +7,8 @@ $(document).ready( function(){
 
 	renderHighlightedRecipes(recipesArray);
 
+   renderActivities(activities);
+
 });
 
 /*función para agregar texto a clase callout-news"*/
@@ -83,7 +85,7 @@ function renderRecipe(recipe) {
     span6.text(recipe.cookTime);
 
     var imagen=$("<img/>");
-    imagen.attr( "src" , recipe.source.url);
+    imagen.attr( "src" , recipe.source.url); //nombre del objeto.atributo;
 
     $(".list-recipes").append(enlace);
     enlace.append(span);
@@ -102,6 +104,14 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+   
+
+    if(activitiesArray.length > 0){
+        $('.wrapper-message').hide();
+    }
+
+     _.each(activitiesArray, renderActivity);
+    
 }
 
 /*
@@ -109,8 +119,8 @@ function renderActivities(activitiesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-	
-}
+
+
+
 
 
