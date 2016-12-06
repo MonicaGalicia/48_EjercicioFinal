@@ -41,6 +41,7 @@ function printNews(){
 function renderHighlightedRecipes() {
 	$(recipesArray).each( function (index ,value){
              if(value.highlighted==true){
+            renderRecipe(value);
             console.log(value);
         };
     });
@@ -55,6 +56,43 @@ function renderHighlightedRecipes() {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+    var enlace=$("<a></a>");
+    enlace.addClass("item-recipe");
+    console.log(enlace);
+
+    var span=$("<span></span>");
+    span.addClass("attribution");
+
+    var span2=$("<span></span>");
+    span2.addClass("title-recipe");
+    span2.attr("title" , recipe.title);
+    span2.text(recipe.title);
+
+    var span3=$("<span></span>");
+    span3.addClass("metadata-recipe");
+
+    var span4=$("<span></span>");
+    span4.addClass("author-recipe");
+    span4.text(recipe.name);
+
+    var span5=$("<span></span>");
+    span5.addClass("bookmarks-recipe");
+
+    var span6=$("<span></span>");
+    span6.addClass("icon-bookmark");
+    span6.text(recipe.cookTime);
+
+    var imagen=$("<img/>");
+    imagen.attr( "src" , recipe.source.url);
+
+    $(".list-recipes").append(enlace);
+    enlace.append(span);
+    span.append(span2);
+    span.append(span3);
+    span3.append(span4);
+    span3.append(span5);
+    span5.append(span6);
+    enlace.append(imagen);
 }
 
 
