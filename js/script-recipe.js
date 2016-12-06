@@ -19,7 +19,10 @@ $('.js-show-make').click(function() {
     
 });
 
-
+$('.js-back').click(function() {
+   window.location = 'index.html';
+    
+});
 
 
 
