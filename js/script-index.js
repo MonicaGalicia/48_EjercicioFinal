@@ -9,6 +9,13 @@ $(document).ready( function(){
 
 });
 
+/*función para agregar texto a clase callout-news"*/
+function printNews(){
+        $(".callout-news").children('p').text("Nuevas recetas");
+       
+    };
+
+    printNews();
 
 
 
